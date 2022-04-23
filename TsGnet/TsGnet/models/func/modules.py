@@ -126,26 +126,12 @@ class Block(nn.Module):
         return out
 
 
+# if __name__ == "__main__":
+#     """
+#     class Block(nn.Module) 测试
+#     """
+#     data = torch.randn(128, 9, 32, 200)
+#     model_2 = Block(9, 32, 64, 7, 2)
+#     out_1 = model_2(data)
+#     print("out_1 size", out_1.size())
 
-if __name__ == "__main__":
-    """
-    class Block(nn.Module) 测试
-    """
-    data = torch.randn(128, 9, 32, 200)
-    model_2 = Block(9, 32, 64, 7, 2)
-    out_1 = model_2(data)
-    print("out_1 size", out_1.size())
-
-    # model = Unfold((2, 150), 2)
-    # result = model(out_1)
-    # print(result.size())
-    # model_3 = Block(5, 64, 64, 5, 1)
-    # out_2 = model_3(result)
-    # print("out_2 size", out_2.size())
-    # print()
-    # model_ = Unfold((2, 30), 1)
-    # data_ = model_(result)
-    # print("new input:", data_.size())
-    # model2 = Block(18, 64, 128, 5, 5, 2)
-    # r = model2(data_)
-    # print(r.size())

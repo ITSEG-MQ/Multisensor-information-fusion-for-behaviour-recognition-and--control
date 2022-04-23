@@ -190,15 +190,15 @@ class MultiHead(nn.Module):
         return x
 
 
-if __name__ == "__main__":
-    """
-    class PrepBlock(nn.Module) 测试
-    """
-    raw_data = torch.randn(128, 1, 1, 3000)
-    model_1 = NodeGenerator(600, 0.5, 9)
-    model_2 = MultiHead(32)
-    vif, pred_data = model_1(raw_data)
-    print("pred data size:", pred_data.size())
-    print(vif.size())
-    out = model_2(pred_data)
-    print(out.size())
+# if __name__ == "__main__":
+#     """
+#     class PrepBlock(nn.Module) 测试
+#     """
+#     raw_data = torch.randn(128, 1, 1, 3000)
+#     model_1 = NodeGenerator(600, 0.5, 9)
+#     model_2 = MultiHead(32)
+#     vif, pred_data = model_1(raw_data)
+#     print("pred data size:", pred_data.size())
+#     print(vif.size())
+#     out = model_2(pred_data)
+#     print(out.size())
